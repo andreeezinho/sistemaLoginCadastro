@@ -26,7 +26,7 @@
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <h3 class="title has-text-grey">Sistema de Login</h3>
-                    <h3 class="title has-text-grey"><a href="https://youtube.com/canaltioficial" target="_blank">Andreeezinho</a></h3>
+                    <h3 class="title has-text-grey">Andreeezinho</h3>
                     
                     <?php
                         //se nao_autenticado existir(true) renderizar a div de erro
@@ -57,6 +57,11 @@
                                     <input name="senha" class="input is-large" type="password" placeholder="Sua senha">
                                 </div>
                             </div>
+                            
+                            <div class="field">
+                                <a href="cadastro.php">Não possui usuario? Cadastre-se aqui</a>
+                            </div>
+
                             <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
                         </form>
                     </div>

@@ -5,7 +5,7 @@
 <h2>
     Olá, 
     <?php 
-        echo $_SESSION['usuario']; 
+        echo $_SESSION['nome']; 
     ?>
 </h2>
 

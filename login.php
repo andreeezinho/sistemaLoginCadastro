@@ -15,7 +15,7 @@
     $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
     //query para veriricar se dados do login estao certos ou nao
-    $query = "select usuario_id, usuario from usuario where usuario = '{$usuario}' and senha = md5('{$senha}')";
+    $query = "select usuario_id, nome from usuario where usuario = '{$usuario}' and senha = md5('{$senha}')";
 
     //executar a query
     $result = mysqli_query($conexao, $query);
@@ -24,7 +24,9 @@
     $row = mysqli_num_rows($result);
 
     if($row == 1){
-        $_SESSION['usuario'] = $usuario;
+        //colocando nome do usuario ao inves só do usuario
+        $usuario_bd = mysqli_fetch_assoc($result);
+        $_SESSION['nome'] = $usuario_bd['nome'];
         header('Location: painel.php');
         exit();
     }else{
